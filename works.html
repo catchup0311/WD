@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Works | Your Name Portfolio</title>
+    <meta name="description" content="Gallery and video works by [Your Name]." />
+    <meta name="keywords" content="portfolio gallery, video works, photography, web design" />
+    <meta name="author" content="Your Name" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><span class="logo-icon">◆</span> Portfolio</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="works.html">Works</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Works</h1>
+        <p class="page-sub">Gallery & Video Projects</p>
+    </div>
+
+    <section class="gallery">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2>Gallery</h2>
+            <span class="section-line"></span>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-item-large">
+                <img src="images/workP01.jpg" alt="Project 01" ondblclick="openLightbox(this.src)" />
+                <span class="gallery-label">Project 01</span>
+            </div>
+            <div class="gallery-item">
+                <img src="images/workP02.jpg" alt="Project 02" ondblclick="openLightbox(this.src)" />
+                <span class="gallery-label">Project 02</span>
+            </div>
+            <div class="gallery-item">
+                <img src="images/workP03.jpg" alt="Project 03" ondblclick="openLightbox(this.src)" />
+                <span class="gallery-label">Project 03</span>
+            </div>
+            <div class="gallery-item">
+                <img src="images/workP04.jpg" alt="Project 04" ondblclick="openLightbox(this.src)" />
+                <span class="gallery-label">Project 04</span>
+            </div>
+            <div class="gallery-item">
+                <img src="images/workP05.jpg" alt="Project 05" ondblclick="openLightbox(this.src)" />
+                <span class="gallery-label">Project 05</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="videos">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2>Video Works</h2>
+            <span class="section-line"></span>
+        </div>
+        <div class="video-grid">
+            <div class="video-item">
+                <video controls poster="images/workP06.png">
+                    <source src="videos/foodchain.datahunters.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-info">
+                    <h3>Foodchain · Data Hunters</h3>
+                    <span class="video-tag">Short Film</span>
+                </div>
+            </div>
+            <div class="video-item">
+                <video controls poster="images/workP07.png">
+                    <source src="videos/parkeasy.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-info">
+                    <h3>Parkeasy</h3>
+                    <span class="video-tag">Motion</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Your Name | Web Design Principles Assignment 4</p>
+        <p class="footer-links">
+            <a href="index.html">Back to Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://github.com/" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Full size image" />
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = src;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+</html>

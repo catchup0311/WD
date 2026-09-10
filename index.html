@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Anna | Design Portfolio</title>
+    <meta name="description" content="Personal design portfolio of Anna, a web and visual designer specializing in UI/UX, branding, and interactive experiences." />
+    <meta name="keywords" content="portfolio, web design, UI UX, graphic design, HTML, CSS, creative developer" />
+    <meta name="author" content="Anna" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Anna | Design Portfolio" />
+    <meta property="og:description" content="Explore the design work of Anna." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><span class="logo-icon">◆</span> Portfolio</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="works.html">Works</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">DESIGNER · DEVELOPER</div>
+            <h1>Anna</h1>
+            <p class="hero-sub">WEB · UI/UX · VISUAL</p>
+            <p class="hero-tagline">"Design is not just what it looks like and feels like. Design is how it works."</p>
+            <div class="hero-info-grid">
+                <span>Based in <strong>---</strong></span>
+                <span>Focus <strong>---</strong></span>
+                <span>Status <strong>---</strong></span>
+            </div>
+            <a href="works.html" class="btn">View Work ▸</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/profile01.jpg" alt="Portrait of Anna" ondblclick="openLightbox(this.src)" />
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2>About</h2>
+            <span class="section-line"></span>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Hello, I'm <strong>Anna</strong> — a designer and front-end developer currently studying Web Design Principles. I specialize in creating clean, user-friendly interfaces that balance aesthetics with usability.</p>
+                <p>My work spans <strong>UI/UX design</strong>, <strong>brand identity</strong>, and <strong>responsive web development</strong>. I enjoy turning complex problems into simple, beautiful solutions.</p>
+                <p>When I'm not designing, you'll usually find me -------------.</p>
+				<p>The photos displayed on these two pages are my photographic works, used in place of my portrait photo.</p>
+                <div class="about-stats">
+                    <div class="stat-item"><span class="stat-label">Projects</span><span class="stat-value">12+</span></div>
+                    <div class="stat-item"><span class="stat-label">Experience</span><span class="stat-value">2 yrs</span></div>
+                    <div class="stat-item"><span class="stat-label">Tools</span><span class="stat-value">AI · PS</span></div>
+                    <div class="stat-item"><span class="stat-label">Code</span><span class="stat-value">HTML/CSS</span></div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="images/profile01.jpg" alt="Anna working" ondblclick="openLightbox(this.src)" />
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Anna | Web Design Principles Assignment 4</p>
+        <p class="footer-links">
+            <a href="index.html">Back to Top</a>
+            <a href="works.html">Works</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://github.com/" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Full size image" />
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = src;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+</html>
